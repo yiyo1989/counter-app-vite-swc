@@ -1,18 +1,20 @@
 
 
 
-
+/*
 function pruebas() {
   return {
     message: 'Hola',
     title: 'Pagina prueba'
     };
 }
+*/
+
+import PropTypes from "prop-types";
 
 
 
-
-const FirstApp = ({title,subtitle}) => {
+const FirstApp = ({title='No hay titulo',subtitle}) => {
  
   return (
     <>
@@ -21,8 +23,14 @@ const FirstApp = ({title,subtitle}) => {
      <p>Bojorges</p>
     </>
    
-  )
+  );
 }
+
+FirstApp.propTypes = {
+title: PropTypes.string.isRequired,
+subtitle: PropTypes.string
+};
+
 
 export default FirstApp
 
